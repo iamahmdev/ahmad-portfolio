@@ -27,7 +27,7 @@ function fallback(q: string): string {
   if (has("project", "work", "portfolio", "built"))
     return projectsList.map((p) => `${p.title}: ${p.description}`).join("\n");
   if (has("experience", "job", "company", "year"))
-    return "2+ years of front-end and 1+ year of MERN experience, at Faucon IMC, WebixSolutions, The WebStep, Hikenseek and Tech Mentors.";
+    return "2+ years of full-stack MERN experience, engineering web apps and scalable systems at Faucon IMC, WebixSolutions, The WebStep, Hikenseek and Tech Mentors.";
   return `${me.about} Ask about services, skills, projects or hiring.`;
 }
 
