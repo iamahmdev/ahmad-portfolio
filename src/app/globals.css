@@ -51,9 +51,12 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);letter-spacing:-.03em;margin-bottom:12px}
 .rv{opacity:0;transform:translateY(50px) rotateX(-18deg);transition:opacity .7s,transform .7s}.rv.v{opacity:1;transform:none}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 26px}.chip{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--panel);font-size:.95rem;transition:.25s}
 .chip:hover{border-color:var(--a);color:var(--a);transform:translateY(-5px)}.skh{color:var(--b);font-weight:700}
-.tl{border-left:2px solid var(--line);padding-left:28px;display:grid;gap:26px}
-.job{position:relative}.job::before{content:"";position:absolute;left:-36px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 18px var(--a)}
-.job small{color:var(--a)}.job h3{font-size:1.25rem}.job p{color:var(--mut)}
+.tl{border-left:2px solid var(--line);padding-left:32px;display:grid;gap:32px}
+.job{position:relative}.job::before{content:"";position:absolute;left:-39px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 16px var(--a)}
+.job small,.job-date{display:inline-block;font-size:.85rem;font-weight:600;color:var(--a);margin-bottom:4px;letter-spacing:.02em}
+.job h3,.job-title{font-size:1.3rem;font-weight:700;color:#fff;margin:2px 0 4px}
+.job-company{font-size:.95rem;font-weight:500;color:var(--b);margin-bottom:8px}
+.job p,.job-desc{color:var(--mut);line-height:1.65;font-size:.95rem;margin:0}
 .tag{display:inline-block;font-size:.8rem;margin:14px 8px 0 0;padding:3px 10px;border-radius:8px;background:rgba(129,140,248,.16);color:var(--b)}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .form{display:grid;gap:14px}.form input,.form select,.form textarea{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--tx);font:inherit}

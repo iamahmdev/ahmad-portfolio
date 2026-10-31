@@ -14,10 +14,10 @@ export default function ExperienceSection() {
         <div className="tl">
           {jobsList.map((j, i) => (
             <div key={j[0] + i} className="job rv">
-              <small>{j[2]}</small>
-              <h3>{j[0]}</h3>
-              <small>{j[1]}</small>
-              <p>{j[3]}</p>
+              <span className="job-date">{j[2]}</span>
+              <h3 className="job-title">{j[0]}</h3>
+              <div className="job-company">{j[1]}</div>
+              <p className="job-desc">{j[3]}</p>
             </div>
           ))}
         </div>
