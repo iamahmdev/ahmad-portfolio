@@ -18,5 +18,5 @@ export const typingRoles: string[] = [
   "Full Stack MERN Developer",
   "Next.js & React Specialist",
   "SaaS & Web App Engineer",
-  "Tech Writer & Blogger",
+  "REST API & Backend Specialist",
 ];

@@ -34,7 +34,7 @@ export const aboutPillars: AboutPillar[] = [
 export const servicesList: ServiceItem[] = [
   ["Full-Stack Web Applications", "End-to-end custom web apps built with modern React, Next.js, and Node.js. Fast, secure, and ready to scale with your business."],
   ["Next.js Business Websites", "High-converting, SEO-optimized websites with smooth animations that load fast, rank on Google, and win you real customers."],
-  ["Technical Writing & Daily Articles", "In-depth tech blogs, programming tutorials, and daily articles to build your brand authority and explain complex concepts simply."],
+  ["REST APIs & Backend Engineering", "Robust, secure, and well-documented RESTful APIs built with Node.js, Express, and MongoDB, engineered for high reliability and seamless integration."],
   ["Dashboards & Management Portals", "Custom admin panels, client portals, and real-time management dashboards designed for team productivity and smooth workflows."],
   ["Figma to Interactive Code", "Pixel-perfect conversion of your Figma, Adobe XD, or Sketch designs into clean, responsive, and mobile-friendly web interfaces."],
   ["AI Integration & Automation", "Smart AI assistants, automated customer workflows, and modern intelligent features integrated directly into your existing web apps."],

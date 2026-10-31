@@ -227,3 +227,11 @@ footer{padding:30px 0 60px;text-align:center;color:var(--mut)}
   color: var(--a);
   transform: translateY(-2px);
 }
+.btn-proj.btn-private {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(140, 170, 255, 0.22);
+  color: var(--mut);
+  cursor: default;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+}

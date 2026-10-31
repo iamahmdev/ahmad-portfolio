@@ -21,7 +21,7 @@ function fallback(q: string): string {
   if (has("hire", "contact", "email", "reach", "price", "cost", "available"))
     return `You can reach Ahmad at ${me.email}, on WhatsApp (${me.phone}), or on LinkedIn. He takes part-time and project-based work.`;
   if (has("service", "offer", "do you do", "help"))
-    return "Ahmad builds full-stack web apps, high-performance Next.js websites, management dashboards, Figma-to-code interfaces, AI automations, and writes daily technical articles.";
+    return "Ahmad builds full-stack web apps, high-performance Next.js websites, management dashboards, Figma-to-code interfaces, robust REST APIs, and modern AI automations.";
   if (has("skill", "stack", "tech", "tool"))
     return "Frontend: React, Next.js, TypeScript, Tailwind, Redux Toolkit, TanStack Query, Framer Motion. Backend: Node.js, Express, MongoDB. Tools: Git, Postman, Vercel, Figma, Claude, Cursor.";
   if (has("project", "work", "portfolio", "built"))

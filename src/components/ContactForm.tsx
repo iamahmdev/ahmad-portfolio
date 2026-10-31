@@ -57,7 +57,7 @@ export default function ContactForm() {
             "Business website",
             "Full-stack web app",
             "Dashboard or portal",
-            "Tech writing / Articles",
+            "REST API / Backend Engineering",
             "Something else",
           ].map((o) => (
             <option key={o}>{o}</option>
