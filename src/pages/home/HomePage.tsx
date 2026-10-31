@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Agent from "@/components/Agent";
 import HeroSection from "./components/HeroSection";
 import WorriesSection from "./components/WorriesSection";
 import AboutSection from "./components/AboutSection";
@@ -97,7 +96,6 @@ export default function HomePage() {
       </main>
       <Footer />
       <WhatsAppButton />
-      <Agent />
     </>
   );
 }
