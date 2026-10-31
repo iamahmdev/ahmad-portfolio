@@ -12,7 +12,7 @@ About: ${me.about}
 Services: ${servicesList.map((s) => s[0] + ": " + s[1]).join(" | ")}
 Skills: ${JSON.stringify(skillsList)}
 Experience: ${jobsList.map((j) => j.join(", ")).join(" | ")}
-Projects: ${projectsList.map((p) => p[0] + ": " + p[1]).join(" | ")}
+Projects: ${projectsList.map((p) => p.title + ": " + p.description).join(" | ")}
 Location: Lahore, Pakistan. Languages: Urdu (native), English (professional). Education: BSSE, Abasyn University.`;
 
 function fallback(q: string): string {
@@ -25,7 +25,7 @@ function fallback(q: string): string {
   if (has("skill", "stack", "tech", "tool"))
     return "Frontend: React, Next.js, TypeScript, Tailwind, Redux Toolkit, TanStack Query, Framer Motion. Backend: Node.js, Express, MongoDB. Tools: Git, Postman, Vercel, Figma, Claude, Cursor.";
   if (has("project", "work", "portfolio", "built"))
-    return projectsList.map((p) => `${p[0]}: ${p[1]}`).join("\n");
+    return projectsList.map((p) => `${p.title}: ${p.description}`).join("\n");
   if (has("experience", "job", "company", "year"))
     return "2+ years of front-end and 1+ year of MERN experience, at Faucon IMC, WebixSolutions, The WebStep, Hikenseek and Tech Mentors.";
   return `${me.about} Ask about services, skills, projects or hiring.`;

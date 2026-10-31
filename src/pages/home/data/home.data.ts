@@ -100,26 +100,88 @@ export const jobsList: JobItem[] = [
 ];
 
 export const projectsList: ProjectItem[] = [
-  [
-    "University Portal",
-    "A full-stack portal handling student data and workflows, with REST APIs connecting React to Express and MongoDB.",
-    ["React", "Node", "Express", "MongoDB"],
-  ],
-  [
-    "School LMS",
-    "Teachers manage courses, assignments and grades; students track lessons and submit work. Role-based dashboards with real-time updates.",
-    ["React", "Node", "Express", "MongoDB"],
-  ],
-  [
-    "Card Management Dashboard",
-    "Secure role-based dashboard for 1,000+ global users, built from 20+ Figma screens.",
-    ["Next.js", "Tailwind", "MUI"],
-  ],
-  [
-    "Tapwise Digital",
-    "Next.js SSR with TanStack Query: 40% faster page loads and 25% fewer bugs.",
-    ["Next.js", "TypeScript", "Framer Motion"],
-  ],
+  {
+    id: "softcore-technologies",
+    title: "Softcore Technologies",
+    description:
+      "Modern corporate enterprise platform showcasing custom software development, digital marketing, mobile app engineering, and cloud infrastructure services.",
+    image: "/projects/softcore.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "TanStack Query", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/Softcore_Technologies",
+    category: "Enterprise Software",
+  },
+  {
+    id: "the-book-today",
+    title: "The Book Today",
+    description:
+      "Comprehensive travel and hospitality reservation platform for booking flights, hotels, car rentals, and city transfers with intuitive filtering.",
+    image: "/projects/thebooktoday.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "TanStack Query", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/TheBookToday",
+    category: "Travel & Hospitality",
+  },
+  {
+    id: "townexis",
+    title: "Townexis",
+    description:
+      "On-demand roadside assistance, vehicle towing, snow clearing, and heavy-duty junk removal contractor platform serving St. John's, NL.",
+    image: "/projects/townexis.jpg",
+    tags: ["React", "TypeScript", "TanStack Router", "Tailwind CSS", "Radix UI", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/Townexis",
+    category: "On-Demand Services",
+  },
+  {
+    id: "sksecure-website",
+    title: "SKSecureData",
+    description:
+      "Calgary-based enterprise data security, enterprise database management, regulatory compliance audits, and business intelligence reporting platform.",
+    image: "/projects/sksecure.png",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Lucide Icons", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/SkSecure_website",
+    liveUrl: "https://sk-secure-website.vercel.app",
+    category: "Data & Cybersecurity",
+  },
+  {
+    id: "pscybercore",
+    title: "PSCyberCore",
+    description:
+      "Cutting-edge automotive IT infrastructure, cybersecurity defense, fleet tracking technology, and digital telemetry solutions for vehicle enterprises.",
+    image: "/projects/pscybercore.jpg",
+    tags: ["React", "TypeScript", "TanStack Router", "Framer Motion", "Tailwind CSS", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/PSCYBERCORE",
+    category: "Automotive & Cyber",
+  },
+  {
+    id: "core-space-warehousing",
+    title: "Core Space Warehousing",
+    description:
+      "Nationwide industrial warehousing platform providing flexible short-term and long-term climate-controlled storage and distribution logistics across Canada.",
+    image: "/projects/corespace.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "TanStack Query", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/core_space_warehousing",
+    category: "Logistics & Storage",
+  },
+  {
+    id: "camz-cleaning",
+    title: "CAMZ Cleaning",
+    description:
+      "Professional residential, commercial, carpet, and vehicle cleaning service portal featuring online booking calculators, quote generators, and service tiers.",
+    image: "/projects/camzcleaning.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Embla Carousel", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/Camz_Cleaning",
+    liveUrl: "https://camz-cleaning.vercel.app",
+    category: "Commercial Services",
+  },
+  {
+    id: "jain-and-associates",
+    title: "Jain & Associates",
+    description:
+      "Corporate supply-chain advisory, retail logistics, and commercial storage solutions platform serving food & beverage, industrial, and global trade sectors.",
+    image: "/projects/jainassociates.jpg",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "TanStack Query", "Vite"],
+    githubUrl: "https://github.com/iamahmdev/jain-and-associates",
+    category: "Supply Chain & Logistics",
+  },
 ];
 
 export default function HomeDataStub() {
