@@ -55,7 +55,8 @@ h2{font-size:clamp(2rem,4.6vw,3.2rem);letter-spacing:-.03em;margin-bottom:12px}
 .form{display:grid;gap:14px}.form input,.form select,.form textarea{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--tx);font:inherit}
 .form select option{color:#000}.form textarea{min-height:120px;resize:vertical}
 .dl a{display:block;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--panel);margin-bottom:12px;transition:.25s}.dl a:hover{border-color:var(--a);transform:translateX(6px)}.dl small{color:var(--mut);display:block}
-footer{padding:50px 0 100px;text-align:center;color:var(--mut)}
+#contact{padding:60px 0 30px}
+footer{padding:30px 0 60px;text-align:center;color:var(--mut)}
 .ab{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;width:62px;height:62px;border-radius:50%;border:0;cursor:pointer;font-size:1.5rem;background:linear-gradient(135deg,var(--a),var(--b));animation:pl 2.6s infinite}
 .wa{position:fixed;left:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;animation:pl 2.6s infinite}
 @keyframes pl{0%,100%{box-shadow:0 0 24px -4px var(--a)}50%{box-shadow:0 0 54px 6px var(--b)}}

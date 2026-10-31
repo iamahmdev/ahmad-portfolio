@@ -39,9 +39,45 @@ export default function HomePage() {
     );
     document.querySelectorAll(".rv").forEach((el) => rv.observe(el));
 
+    const onScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 80
+      ) {
+        setOn("contact");
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const onAnchorClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement).closest('a[href="#contact"]');
+      if (a) {
+        e.preventDefault();
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+        window.history.pushState(null, "", "#contact");
+        setOn("contact");
+      }
+    };
+    document.addEventListener("click", onAnchorClick);
+
+    if (window.location.hash === "#contact") {
+      setTimeout(() => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+        setOn("contact");
+      }, 150);
+    }
+
     return () => {
       io.disconnect();
       rv.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      document.removeEventListener("click", onAnchorClick);
     };
   }, []);
 
