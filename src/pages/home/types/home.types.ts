@@ -16,7 +16,6 @@ export interface ProjectItem {
   description: string;
   image: string;
   tags: string[];
-  githubUrl?: string;
   liveUrl?: string;
   category: string;
 }
