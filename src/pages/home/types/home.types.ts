@@ -4,6 +4,14 @@ export type FaqItem = [question: string, answer: string];
 
 export type ServiceItem = [title: string, description: string];
 
+export interface ServiceItemDetailed {
+  id: string;
+  title: string;
+  description: string;
+  features: string[];
+  icon: string;
+}
+
 export type StepItem = [title: string, description: string];
 
 export type AboutPillar = [title: string, description: string];

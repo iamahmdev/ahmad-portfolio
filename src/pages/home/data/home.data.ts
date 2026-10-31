@@ -2,6 +2,7 @@ import {
   ProofStat,
   FaqItem,
   ServiceItem,
+  ServiceItemDetailed,
   StepItem,
   AboutPillar,
   JobItem,
@@ -31,14 +32,109 @@ export const aboutPillars: AboutPillar[] = [
   ["Remote ready", "Working with a Dubai-based team and international clients. Urdu native, professional English."],
 ];
 
-export const servicesList: ServiceItem[] = [
-  ["Full-Stack Web Applications", "End-to-end custom web apps built with modern React, Next.js, and Node.js. Fast, secure, and ready to scale with your business."],
-  ["Next.js Business Websites", "High-converting, SEO-optimized websites with smooth animations that load fast, rank on Google, and win you real customers."],
-  ["REST APIs & Backend Engineering", "Robust, secure, and well-documented RESTful APIs built with Node.js, Express, and MongoDB, engineered for high reliability and seamless integration."],
-  ["Dashboards & Management Portals", "Custom admin panels, client portals, and real-time management dashboards designed for team productivity and smooth workflows."],
-  ["Figma to Interactive Code", "Pixel-perfect conversion of your Figma, Adobe XD, or Sketch designs into clean, responsive, and mobile-friendly web interfaces."],
-  ["AI Integration & Automation", "Smart AI assistants, automated customer workflows, and modern intelligent features integrated directly into your existing web apps."],
+export const servicesListDetailed: ServiceItemDetailed[] = [
+  {
+    id: "web-design-dev",
+    title: "Website Design & Development",
+    description: "Modern, high-converting websites designed to impress visitors and represent your brand with perfection.",
+    features: [
+      "Business websites",
+      "Portfolio websites",
+      "Landing pages",
+      "Corporate websites",
+    ],
+    icon: "layout",
+  },
+  {
+    id: "ecommerce-dev",
+    title: "E-commerce Development",
+    description: "End-to-end digital storefronts built for seamless shopping, high conversions, and effortless store management.",
+    features: [
+      "Online shopping stores",
+      "Product & inventory management",
+      "Shopping carts & checkout systems",
+      "Payment gateway integration",
+    ],
+    icon: "shopping-bag",
+  },
+  {
+    id: "custom-web-apps",
+    title: "Custom Web Application Development",
+    description: "Tailored business software and management portals engineered for performance, security, and scalability.",
+    features: [
+      "CRM systems",
+      "Admin dashboards",
+      "Booking & appointment systems",
+      "Business management applications",
+    ],
+    icon: "layers",
+  },
+  {
+    id: "backend-api-dev",
+    title: "Backend & API Development",
+    description: "High-throughput server architectures, secure APIs, and optimized databases built with Node.js and MongoDB.",
+    features: [
+      "Node.js & Express.js development",
+      "REST API development",
+      "Authentication & authorization",
+      "Database design & integration",
+    ],
+    icon: "server",
+  },
+  {
+    id: "frontend-dev",
+    title: "Frontend Development",
+    description: "Pixel-accurate, animated, and accessible user interfaces built with React.js, TypeScript, and modern CSS.",
+    features: [
+      "React.js applications",
+      "Responsive user interfaces",
+      "Reusable components",
+      "Interactive web experiences",
+    ],
+    icon: "code",
+  },
+  {
+    id: "api-integration",
+    title: "Third-Party API Integration",
+    description: "Connecting your web app with industry-standard payment providers, cloud services, and external APIs.",
+    features: [
+      "Payment gateway integration",
+      "Google Maps integration",
+      "Social media API integration",
+      "Email services & external APIs",
+    ],
+    icon: "plug",
+  },
+  {
+    id: "optimization-maintenance",
+    title: "Website Optimization & Maintenance",
+    description: "Keeping your website blazing fast, fully secured, bug-free, and running smoothly 24/7.",
+    features: [
+      "Website performance optimization",
+      "Bug fixing & troubleshooting",
+      "Responsive design improvements",
+      "Ongoing website maintenance",
+    ],
+    icon: "gauge",
+  },
+  {
+    id: "seo-web-dev",
+    title: "SEO-Friendly Web Development",
+    description: "Building websites that search engines love, driving organic rankings and qualified customer traffic.",
+    features: [
+      "Technical SEO implementation",
+      "Meta titles & descriptions",
+      "Semantic HTML structure",
+      "Sitemap & robots.txt configuration",
+    ],
+    icon: "search",
+  },
 ];
+
+export const servicesList: ServiceItem[] = servicesListDetailed.map((s) => [
+  s.title,
+  s.description,
+]);
 
 export const stepsList: StepItem[] = [
   ["Requirements", "We talk through your goals, users and deadline."],
