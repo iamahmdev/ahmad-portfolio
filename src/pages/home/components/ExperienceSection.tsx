@@ -8,8 +8,8 @@ export default function ExperienceSection() {
     <section id="experience">
       <div className="wrap">
         <SectionHeader
-          t="Experience"
-          p="Three years of shipping real products for real clients."
+          t="Professional Experience"
+          p="A proven track record of engineering and scaling production applications for international clients, high-growth startups, and agencies."
         />
         <div className="tl">
           {jobsList.map((j, i) => (

@@ -7,7 +7,10 @@ export default function SkillsSection() {
   return (
     <section id="skills">
       <div className="wrap">
-        <SectionHeader t="Skills" p="The tools I use every day." />
+        <SectionHeader
+          t="Technical Skills & Expertise"
+          p="Modern full-stack technologies and industry-standard tooling engineered for performance, security, and scalability."
+        />
         {Object.entries(skillsList).map(([k, v]) => (
           <div key={k}>
             <div className="skh">{k}</div>
