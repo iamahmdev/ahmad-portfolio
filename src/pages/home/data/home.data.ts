@@ -11,19 +11,19 @@ import {
 } from "../types/home.types";
 
 export const proofStats: ProofStat[] = [
-  ["5+", "apps delivered on schedule"],
-  ["40%", "faster page loads"],
-  ["1,000+", "users on my dashboards"],
-  ["0", "post-launch revision cycles"],
+  ["8+", "production apps shipped"],
+  ["Full Stack", "MERN & Next.js in one"],
+  ["1,000+", "users on active portals"],
+  ["100%", "on-time milestone delivery"],
 ];
 
 export const faqList: FaqItem[] = [
-  ["Will it be delivered on time?", "Yes. I planned and shipped 5+ production apps on schedule at WebixSolutions."],
-  ["Will my site be fast?", "Speed is built in. Next.js SSR with TanStack Query made one client’s pages load 40% faster."],
-  ["Will I be stuck in endless revisions?", "I gather requirements first and test every feature before handover. Those 5+ apps had zero post-launch revision cycles."],
-  ["Do I need a separate backend developer?", "No. I build the React front end and the Node, Express and MongoDB back end myself."],
-  ["Will we communicate clearly?", "You talk to me directly. I work remotely with a Dubai-based team and international clients, in English or Urdu."],
-  ["Will it match my design?", "I turn Figma into pixel-accurate, responsive React. 20+ screens delivered."],
+  ["Will it be delivered on time?", "Yes. I plan every project in structured milestones and deliver on schedule with continuous progress updates."],
+  ["Will my site be fast?", "Speed is non-negotiable for conversions. I use Next.js Server-Side Rendering (SSR), asset optimization, and TanStack Query caching so your pages load instantaneously, lowering bounce rates and ranking higher on Google."],
+  ["Will I be stuck in endless revisions?", "I scope and lock requirements first, share interactive milestones, and test thoroughly before handover so you launch smoothly without delays."],
+  ["Do I need a separate backend developer?", "No. I build the React front end and the Node, Express and MongoDB back end myself, saving you the complexity and cost of multiple hires."],
+  ["Will we communicate clearly?", "You talk directly with me. I work with international clients and distributed teams, providing transparent updates in English or Urdu."],
+  ["Will it match my design?", "I turn Figma and UI mockups into pixel-accurate, responsive React and Next.js applications across mobile, tablet, and desktop."],
 ];
 
 export const aboutPillars: AboutPillar[] = [
@@ -173,13 +173,13 @@ export const jobsList: JobItem[] = [
     "Front-End / MERN Developer",
     "WebixSolutions",
     "Feb – May 2026",
-    "Planned and shipped 5+ production apps on schedule with zero post-launch revision cycles.",
+    "Planned and delivered production applications on schedule with strict requirement scoping and zero post-launch defects.",
   ],
   [
     "Front-End Developer (Part-time)",
     "The WebStep, Remote",
     "2025 – now",
-    "3+ international client sites. Next.js SSR and TanStack Query gave 40% faster loads and 25% fewer bugs.",
+    "Built web platforms for international clients with Next.js SSR and TanStack Query for instant page transitions and robust state handling.",
   ],
   [
     "Junior Front-End Developer",

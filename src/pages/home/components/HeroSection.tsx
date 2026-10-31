@@ -28,7 +28,7 @@ export default function HeroSection() {
             <span className="grad">that win customers.</span>
           </h1>
           <p className="s">
-            Hi, I’m Ahmad Iqbal — a Full Stack MERN Developer & Next.js Specialist engineering high-performance web applications, scalable SaaS platforms, and modern digital experiences for clients worldwide.
+            Hi, I’m Ahmad Iqbal — a Full Stack MERN Developer & Next.js Specialist. I turn business requirements into production-ready web apps, custom dashboards, and high-converting websites — delivered on time with direct 1-on-1 communication.
           </p>
           <Typer />
           <div className="cta">
@@ -64,20 +64,20 @@ export default function HeroSection() {
           <div className="disc"></div>
           <img className="cut" src="/ahmad-cutout.webp" alt="Ahmad Iqbal, Full Stack MERN Developer" />
           <div className="gc" style={{ left: "-4%", top: "20%" }}>
-            <b className="grad">30%</b>faster project setup
+            <b className="grad">Full-Stack</b>Frontend + Backend
             <br />
-            with AI tools
+            in one engineer
           </div>
           <div className="gc" style={{ right: "-5%", top: "42%", animationDelay: "-2s" }}>
-            <b className="grad">20+</b>Figma screens
+            <b className="grad">8+</b>Production Apps
             <br />
-            turned into code
+            shipped on schedule
           </div>
           <div className="plate">
             <b>Ahmad Iqbal</b>
-            <span>Full Stack Developer · Available Worldwide</span>
+            <span>Full Stack MERN Developer · Available Worldwide</span>
             <em>
-              <i></i>Replies within a day
+              <i></i>Replies within a few hours
             </em>
           </div>
         </div>
