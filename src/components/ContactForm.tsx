@@ -26,11 +26,12 @@ export default function ContactForm() {
         body: JSON.stringify(f),
       });
       const d = await r.json();
-      setSt(
-        d.ok
-          ? "Sent! Ahmad will reply within a day."
-          : d.error || "Could not send. Please use WhatsApp or email instead."
-      );
+      if (d.ok) {
+        setSt(d.message || "Sent! Ahmad will reply within a day.");
+        setF({ name: "", email: "", type: "Business website", message: "" });
+      } else {
+        setSt(d.error || "Could not send. Please use WhatsApp or email instead.");
+      }
     } catch {
       setSt("Could not send. Please use WhatsApp or email instead.");
     }
