@@ -9,7 +9,7 @@ export const me: PersonalInfo = {
   linkedin: "https://linkedin.com/in/iahmadiqbal",
   github: "https://github.com/iamahmdev",
   about:
-    "Full-Stack MERN Developer with 2+ years of experience engineering production-ready web applications, scalable APIs, and dynamic user interfaces with React, Next.js, Node.js, Express, and MongoDB. I turn complex requirements into high-performing digital products using modern AI-assisted workflows to ship faster without cutting quality.",
+    "Full-stack MERN developer with 2+ years of experience across the MERN stack. I turn requirements into production apps with React, Next.js, Node.js, Express and MongoDB, and use AI-assisted workflows to ship faster without cutting quality.",
 };
 
 export const navItems: NavItem[] = ["About", "Services", "Skills", "Experience", "Projects", "Contact"];
