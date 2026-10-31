@@ -6,7 +6,7 @@ import Agent from "@/components/Agent";
 import Contact from "@/components/Contact";
 import { me, nav, services, steps, faq, skills, jobs, projects } from "@/lib/data";
 const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
-const roles = ["MERN Stack Developer", "Next.js Engineer", "React.js Specialist", "REST API Builder"];
+const roles = ["MERN Stack Developer", "Next.js Engineer", "React.js Specialist", "Tech Writer & Blogger"];
 
 function Typer() {
   const [i, setI] = useState(0), [n, setN] = useState(0);

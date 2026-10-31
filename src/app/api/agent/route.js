@@ -12,7 +12,7 @@ function fallback(q) {
   q = q.toLowerCase();
   const has = (...w) => w.some(x => q.includes(x));
   if (has("hire", "contact", "email", "reach", "price", "cost", "available")) return `You can reach Ahmad at ${me.email}, on WhatsApp (${me.phone}), or on LinkedIn. He takes part-time and project-based work.`;
-  if (has("service", "offer", "do you do", "help")) return "Ahmad builds full-stack MERN apps, Next.js websites, REST APIs, dashboards and portals, Figma-to-code interfaces, and AI-assisted prototypes.";
+  if (has("service", "offer", "do you do", "help")) return "Ahmad builds full-stack web apps, high-performance Next.js websites, management dashboards, Figma-to-code interfaces, AI automations, and writes daily technical articles.";
   if (has("skill", "stack", "tech", "tool")) return "Frontend: React, Next.js, TypeScript, Tailwind, Redux Toolkit, TanStack Query, Framer Motion. Backend: Node.js, Express, MongoDB. Tools: Git, Postman, Vercel, Figma, Claude, Cursor.";
   if (has("project", "work", "portfolio", "built")) return projects.map(p => `${p[0]}: ${p[1]}`).join("\n");
   if (has("experience", "job", "company", "year")) return "2+ years of front-end and 1+ year of MERN experience, at Faucon IMC, WebixSolutions, The WebStep, Hikenseek and Tech Mentors.";

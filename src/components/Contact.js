@@ -21,7 +21,7 @@ export default function Contact() {
         <input placeholder="Your name" aria-label="Your name" value={f.name} onChange={set("name")} />
         <input type="email" placeholder="Your email" aria-label="Your email" value={f.email} onChange={set("email")} />
         <select aria-label="Project type" value={f.type} onChange={set("type")}>
-          {["Business website", "Full-stack MERN app", "Dashboard or portal", "API development", "Something else"].map(o => <option key={o}>{o}</option>)}
+          {["Business website", "Full-stack web app", "Dashboard or portal", "Tech writing / Articles", "Something else"].map(o => <option key={o}>{o}</option>)}
         </select>
         <textarea placeholder="What do you want to build?" aria-label="Project details" value={f.message} onChange={set("message")} />
         <div>
