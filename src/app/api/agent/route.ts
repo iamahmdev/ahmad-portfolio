@@ -13,7 +13,7 @@ Services: ${servicesList.map((s) => s[0] + ": " + s[1]).join(" | ")}
 Skills: ${JSON.stringify(skillsList)}
 Experience: ${jobsList.map((j) => j.join(", ")).join(" | ")}
 Projects: ${projectsList.map((p) => p.title + ": " + p.description).join(" | ")}
-Location: Lahore, Pakistan. Languages: Urdu (native), English (professional). Education: BSSE, Abasyn University.`;
+Location: Available worldwide for remote contracts and full-time roles. Languages: English (professional), Urdu. Education: BSSE, Abasyn University.`;
 
 function fallback(q: string): string {
   q = q.toLowerCase();

@@ -15,8 +15,8 @@ export const me: PersonalInfo = {
 export const navItems: NavItem[] = ["About", "Services", "Skills", "Experience", "Projects", "Contact"];
 
 export const typingRoles: string[] = [
-  "MERN Stack Developer",
-  "Next.js Engineer",
-  "React.js Specialist",
+  "Full Stack MERN Developer",
+  "Next.js & React Specialist",
+  "SaaS & Web App Engineer",
   "Tech Writer & Blogger",
 ];

@@ -75,7 +75,7 @@ export const jobsList: JobItem[] = [
   ],
   [
     "Front-End / MERN Developer",
-    "WebixSolutions, Lahore",
+    "WebixSolutions",
     "Feb – May 2026",
     "Planned and shipped 5+ production apps on schedule with zero post-launch revision cycles.",
   ],
