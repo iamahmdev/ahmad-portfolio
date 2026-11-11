@@ -82,26 +82,12 @@ export default function Navbar({ activeSection = "home" }: NavbarProps) {
           })}
         </nav>
 
-        {/* Right Actions: Direct Download CV + Contact CTA */}
+        {/* Right Actions: Contact CTA */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Direct Instant Download CV Button */}
-          <a
-            href="/Ahmad_Iqbal_CV.pdf"
-            download="Ahmad_Iqbal_CV.pdf"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3.5 py-2 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 text-white transition-all shadow-sm"
-          >
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            <span>Download CV</span>
-          </a>
-
           {/* Contact Jump */}
           <a
             href="#contact"
-            className="inline-flex items-center gap-1.5 text-xs font-medium px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-all hover:-translate-y-0.5 active:translate-y-0"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-[0_0_20px_rgba(147,51,234,0.3)] transition-all hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Contact</span>
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

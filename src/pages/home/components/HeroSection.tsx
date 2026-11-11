@@ -57,18 +57,15 @@ export default function HeroSection() {
               </svg>
             </StarBorder>
 
-            {/* Direct Instant Download CV Button */}
+            {/* Contact Action */}
             <a
-              href="/Ahmad_Iqbal_CV.pdf"
-              download="Ahmad_Iqbal_CV.pdf"
+              href="#contact"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-2xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/20 hover:border-purple-400/50 text-white transition-all shadow-sm"
             >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+              <span>Get in Touch</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-              <span>Download CV (PDF)</span>
             </a>
 
             <a
