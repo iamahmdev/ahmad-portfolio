@@ -2,7 +2,6 @@
 import React from "react";
 import StarBorder from "@/components/StarBorder";
 import { SectionPolygons } from "@/components/AmbientBackground";
-import { me } from "@/config/profile";
 
 export default function HeroSection() {
   return (
@@ -25,40 +24,19 @@ export default function HeroSection() {
           Hi, I&apos;m <span className="text-white font-bold">Ahmad Iqbal</span> — Full Stack MERN Developer with 2+ years of professional experience across React, Next.js, Node.js, TypeScript, and MongoDB. I engineer scalable CRM platforms, admin dashboards, e-commerce stores, and client portals with AI-assisted workflows.
         </p>
 
-        {/* Action CTAs */}
-        <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-8 md:mt-10">
+        {/* Action CTA */}
+        <div className="flex items-center gap-4 mt-8 md:mt-10">
           <StarBorder
             as="a"
             href="#projects"
             color="magenta"
-            className="[&_.inner-content]:!bg-white [&_.inner-content]:!text-black [&_.inner-content]:!font-semibold [&_.inner-content]:hover:!bg-zinc-200 [&_.inner-content]:!text-sm [&_.inner-content]:!py-3 [&_.inner-content]:!px-7 shadow-[0_0_25px_rgba(255,255,255,0.2)]"
+            className="[&_.inner-content]:!bg-white [&_.inner-content]:!text-black [&_.inner-content]:!font-semibold [&_.inner-content]:hover:!bg-zinc-200 [&_.inner-content]:!text-sm [&_.inner-content]:!py-3 [&_.inner-content]:!px-7 shadow-[0_0_25px_rgba(255,255,255,0.2)] cursor-pointer"
           >
             <span>Explore Projects</span>
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </StarBorder>
-
-          {/* Contact Action */}
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-6 py-3 rounded-2xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/20 hover:border-purple-400/50 text-white transition-all shadow-sm"
-          >
-            <span>Get in Touch</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
-
-          <a
-            href={`${me.whatsapp}?text=${encodeURIComponent("Hi Ahmad, I came across your portfolio and would like to discuss a project!")}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-5 py-3 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 transition-all shadow-sm"
-          >
-            <span className="w-2 h-2 rounded-full bg-emerald-400" />
-            <span>WhatsApp Chat</span>
-          </a>
         </div>
 
         {/* Social Proof Metric Cards */}
