@@ -95,17 +95,13 @@ export default function ContactSection() {
         {/* Section Heading */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-semibold mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping" />
-              <span>Get in Touch &amp; Download CV</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
               Let&apos;s Build Something <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400">Exceptional.</span>
             </h2>
+            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl font-normal leading-relaxed">
+              Direct communication, clear milestone scoping, and production delivery. Connect directly with Ahmad below.
+            </p>
           </div>
-          <p className="text-zinc-400 text-sm sm:text-base max-w-md font-medium">
-            Direct communication, clear milestone scoping, and production delivery. Connect directly with Ahmad below.
-          </p>
         </div>
 
         {/* Central CV Download Card */}

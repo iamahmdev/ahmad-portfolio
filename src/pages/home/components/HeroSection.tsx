@@ -16,16 +16,23 @@ export default function HeroSection() {
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full min-h-[auto] md:min-h-[80vh]">
         {/* Left Column: Heading, Bio, CTAs, Proof badges (7 cols) */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left w-full z-10">
-          {/* Degree & Professional Credential Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs text-zinc-300 font-mono mb-6 w-fit shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
-            <span className="text-purple-300 font-semibold">BS Software Engineering (BSSE)</span>
-            <span className="text-zinc-600">•</span>
-            <span className="text-zinc-400">Abasyn University</span>
+          {/* Sleek status bar without bulky borders */}
+          <div className="flex items-center gap-2 mb-6">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+            </span>
+            <span className="text-xs sm:text-sm font-mono text-zinc-400">
+              <span className="text-white font-medium">Ahmad Iqbal</span>
+              <span className="text-zinc-600 mx-2">·</span>
+              <span className="text-purple-300 font-medium">BS Software Engineering (BSSE)</span>
+              <span className="text-zinc-600 mx-2">·</span>
+              <span className="text-emerald-400 font-medium">Available</span>
+            </span>
           </div>
 
           {/* High-contrast distinctive typography */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.06] tracking-tight">
             Building scalable MERN apps that{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400">
               scale businesses.
@@ -33,7 +40,7 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-5 md:mt-6 text-zinc-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl">
-            Hi, I&apos;m <span className="text-white font-bold">Ahmad Iqbal</span> — BS Software Engineering (BSSE) graduate &amp; Full Stack MERN Developer with 2+ years of professional experience. I engineer scalable CRM platforms, admin dashboards, e-commerce stores, and client portals with TypeScript and AI-assisted workflows.
+            Full Stack MERN Developer with 2+ years of production experience. I engineer scalable CRM platforms, admin dashboards, e-commerce stores, and client portals with TypeScript and AI-assisted workflows.
           </p>
 
           {/* Action CTAs */}

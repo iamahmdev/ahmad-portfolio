@@ -24,16 +24,13 @@ export default function ProjectsSection() {
       <div className="relative z-10">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 md:mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 dark:text-purple-300 light:text-purple-700 text-xs font-semibold mb-3">
-              <span>Client &amp; Production Work</span>
-            </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white dark:text-white light:text-zinc-950 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
               Featured Case Studies
             </h2>
+            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl font-normal leading-relaxed">
+              Production web applications, client portals, and bespoke SaaS platforms engineered for real businesses.
+            </p>
           </div>
-          <p className="text-zinc-400 dark:text-zinc-400 light:text-zinc-600 text-sm sm:text-base max-w-md font-medium">
-            Production web applications, client portals, and bespoke SaaS platforms engineered for real businesses.
-          </p>
         </div>
 
         {/* Category Filters Pill Bar */}
