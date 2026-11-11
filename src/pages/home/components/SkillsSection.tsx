@@ -10,6 +10,7 @@ interface SkillItem {
 
 interface SkillCategory {
   id: string;
+  tabLabel: string;
   title: string;
   subtitle: string;
   color: string;
@@ -25,6 +26,7 @@ export default function SkillsSection() {
   const categories: SkillCategory[] = [
     {
       id: "core",
+      tabLabel: "Core Stack",
       title: "Core Full-Stack Engine",
       subtitle: "Primary daily production stack for client platforms & SaaS",
       color: "from-purple-500/20 via-pink-500/10 to-transparent",
@@ -48,6 +50,7 @@ export default function SkillsSection() {
     },
     {
       id: "frontend",
+      tabLabel: "Frontend",
       title: "Modern UI & Frontend Engineering",
       subtitle: "Pixel-perfect, accessible, and responsive user interfaces",
       color: "from-sky-500/20 via-blue-500/10 to-transparent",
@@ -70,6 +73,7 @@ export default function SkillsSection() {
     },
     {
       id: "backend",
+      tabLabel: "Backend",
       title: "Backend, APIs & Database",
       subtitle: "Secure schema design, authentication, and RESTful endpoints",
       color: "from-emerald-500/20 via-teal-500/10 to-transparent",
@@ -94,6 +98,7 @@ export default function SkillsSection() {
     },
     {
       id: "state",
+      tabLabel: "State & Data",
       title: "State & Asynchronous Data Caching",
       subtitle: "Optimistic updates, real-time client state, and sync",
       color: "from-indigo-500/20 via-purple-500/10 to-transparent",
@@ -116,8 +121,9 @@ export default function SkillsSection() {
     },
     {
       id: "tools",
-      title: "DevOps, Workflow & Testing",
-      subtitle: "Version control, automated deployments, and design handoff",
+      tabLabel: "Tools",
+      title: "Developer Tools & Testing",
+      subtitle: "Version control, API validation, and production workflows",
       color: "from-amber-500/20 via-orange-500/10 to-transparent",
       borderGlow: "hover:border-amber-400/50 hover:shadow-[0_0_35px_rgba(251,191,36,0.2)]",
       tagColor: "bg-amber-500/10 text-amber-300 border-amber-500/20",
@@ -128,7 +134,7 @@ export default function SkillsSection() {
       ),
       skills: [
         { name: "Git & GitHub", level: "Daily Production", badge: "Branching & PRs" },
-        { name: "Vercel Cloud", level: "Daily Production", badge: "CI/CD & Previews" },
+        { name: "Vercel Cloud", level: "Daily Production", badge: "Deployments" },
         { name: "Postman", level: "Daily Production", badge: "API Testing" },
         { name: "Figma to React", level: "Daily Production", badge: "Pixel-Perfect" },
         { name: "Jest", level: "Proficient", badge: "Testing" },
@@ -137,6 +143,7 @@ export default function SkillsSection() {
     },
     {
       id: "ai",
+      tabLabel: "AI Workflow",
       title: "AI-Assisted Vibe Coding",
       subtitle: "Accelerated engineering workflows shipping features ~40% faster",
       color: "from-pink-500/20 via-purple-500/10 to-transparent",
@@ -204,7 +211,7 @@ export default function SkillsSection() {
                     : "text-zinc-400 hover:text-white"
                 }`}
               >
-                {c.title.split(" ")[0]}
+                {c.tabLabel}
               </button>
             ))}
           </div>
