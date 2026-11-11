@@ -1,9 +1,6 @@
 import "./globals.css";
-import { Bricolage_Grotesque } from "next/font/google";
 import type { Metadata } from "next";
 import React from "react";
-
-const f = Bricolage_Grotesque({ subsets: ["latin"], variable: "--f" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmad-portfolio-woad.vercel.app"),
@@ -95,7 +92,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={f.variable}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
