@@ -7,7 +7,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="min-h-0 md:min-h-screen py-16 px-4 sm:px-6 md:px-0 max-w-5xl mx-auto w-full pt-32 md:pt-36 pb-16 relative overflow-hidden flex items-center"
+      className="min-h-0 md:min-h-[82vh] px-4 sm:px-6 md:px-0 max-w-5xl mx-auto w-full pt-10 md:pt-14 pb-16 relative overflow-hidden flex items-center"
     >
       <SectionPolygons />
 

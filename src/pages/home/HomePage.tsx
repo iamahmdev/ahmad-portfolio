@@ -52,7 +52,7 @@ export default function HomePage() {
 
       {/* Main Content Sections */}
       <main className="relative z-10">
-        <div className="pt-14 md:pt-20">
+        <div className="pt-6 md:pt-8">
           <HeroSection />
           <ExperienceSection />
           <ProjectsSection />
