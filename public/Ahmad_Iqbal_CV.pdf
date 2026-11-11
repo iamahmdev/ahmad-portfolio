@@ -1,0 +1,134 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595.28 841.89] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 3569 >>
+stream
+BT
+/F1 20 Tf
+50 780 Td
+(Ahmad Iqbal) Tj
+0 -22 Td
+/F1 12 Tf
+(Full Stack Developer \(MERN Stack\)) Tj
+0 -18 Td
+/F1 9 Tf
+(Lahore, Pakistan | +92 335 934 8844 | ahmaddev42@gmail.com | github.com/iamahmdev | linkedin.com/in/iahmadiqbal) Tj
+
+0 -30 Td
+/F1 12 Tf
+(PROFESSIONAL SUMMARY) Tj
+0 -15 Td
+/F1 9 Tf
+(Full Stack Developer with 2+ years of professional experience in the MERN stack and TypeScript,) Tj
+0 -12 Td
+(building scalable CRM platforms, admin dashboards, SaaS products and client websites from requirements) Tj
+0 -12 Td
+(to production. Delivered 25+ web apps with strong React.js, Next.js, Node.js and Express expertise.) Tj
+0 -12 Td
+(Proven impact: cut manual tracking time by ~30% with an internal CRM and new-module build time) Tj
+0 -12 Td
+(by ~40% with reusable React components. AI-assisted development and vibe coding specialist using) Tj
+0 -12 Td
+(Claude, Cursor, Antigravity and GitHub Copilot to ship faster.) Tj
+
+0 -25 Td
+/F1 12 Tf
+(TECHNICAL SKILLS) Tj
+0 -15 Td
+/F1 9 Tf
+(Frontend: TypeScript, JavaScript \(ES6+\), React.js, Next.js, HTML5, CSS3) Tj
+0 -12 Td
+(Styling & UI: Tailwind CSS, Material UI \(MUI\), Responsive Design, Figma to Code) Tj
+0 -12 Td
+(State & Data: Redux Toolkit, Zustand, Context API, TanStack Query) Tj
+0 -12 Td
+(Backend & DB: Node.js, Express.js, RESTful APIs, Authentication \(JWT/RBAC\), MongoDB) Tj
+0 -12 Td
+(Tools: Git, GitHub, Postman, Figma, Vercel, Jest) Tj
+0 -12 Td
+(AI-Assisted Dev: Vibe Coding, Claude, Cursor, Antigravity, GitHub Copilot, Codex) Tj
+
+0 -25 Td
+/F1 12 Tf
+(WORK EXPERIENCE) Tj
+0 -15 Td
+/F1 10 Tf
+(MERN Stack Developer - Khyber Coded, Peshawar                               2024 - 2026) Tj
+0 -12 Td
+/F1 9 Tf
+(- Delivered 15+ production websites and web apps in ~2 years, including SaaS products.) Tj
+0 -12 Td
+(- Engineered an internal CRM as part of a team, cutting daily manual tracking time by ~30%.) Tj
+0 -12 Td
+(- Architected secure REST APIs and MongoDB schemas with validation and authentication.) Tj
+0 -12 Td
+(- Built a reusable React component library, cutting new-module build time by ~40%.) Tj
+0 -12 Td
+(- Developed responsive, mobile-first interfaces with Tailwind CSS across all device viewports.) Tj
+
+0 -18 Td
+/F1 10 Tf
+(Front-End Developer - Webix Solutions \(Remote\)                             2022 - 2023) Tj
+0 -12 Td
+/F1 9 Tf
+(- Led client requirement gathering and authored technical plans for 5+ SaaS web apps.) Tj
+0 -12 Td
+(- Built responsive React.js and Next.js front ends integrated with REST APIs.) Tj
+
+0 -18 Td
+/F1 10 Tf
+(Junior Front-End Developer - Hikenseek, Islamabad                          2021 - 2022) Tj
+0 -12 Td
+/F1 9 Tf
+(- Built 10+ responsive sites and administrative dashboards with React.js, Next.js, Tailwind CSS.) Tj
+0 -12 Td
+(- Converted Figma designs to reusable React components; integrated REST APIs via TanStack Query.) Tj
+
+0 -25 Td
+/F1 12 Tf
+(EDUCATION & CERTIFICATIONS) Tj
+0 -14 Td
+/F1 9 Tf
+(Abasyn University - BS Software Engineering \(BSSE\), Peshawar) Tj
+0 -12 Td
+(Tech Mentors - Master React.js & Modern Web Development \(Certification\), Islamabad) Tj
+
+0 -25 Td
+/F1 12 Tf
+(KEY PROJECTS) Tj
+0 -14 Td
+/F1 9 Tf
+(1. Hangu Branded Shoes: E-Commerce store with 50+ items, COD checkout, and interactive 3D product view.) Tj
+0 -12 Td
+(2. Khyber Coded CRM: Modular operations and client tracking platform saving ~30% daily admin time.) Tj
+0 -12 Td
+(3. Can Med Tech College: Responsive academic institution web platform with modern animated UI.) Tj
+0 -12 Td
+(4. CAMZ Cleaning: Service tiers, instant online booking, and custom quote calculation engine.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000234 00000 n 
+00000003863 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+3869
+%%EOF

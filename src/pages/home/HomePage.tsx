@@ -1,101 +1,69 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import PageSectionsNav from "@/components/PageSectionsNav";
+import { AmbientBackground } from "@/components/AmbientBackground";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import HeroSection from "./components/HeroSection";
-import WorriesSection from "./components/WorriesSection";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
 import SkillsSection from "./components/SkillsSection";
-import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
-import { navItems } from "@/config/profile";
 
-const Scene = dynamic(() => import("@/components/Scene"), { ssr: false });
+const sectionIds = ["home", "skills", "projects", "contact"];
 
 export default function HomePage() {
-  const [on, setOn] = useState("");
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const io = new IntersectionObserver(
-      (es) => es.forEach((e) => e.isIntersecting && setOn(e.target.id)),
-      { threshold: 0.35 }
-    );
-    navItems.forEach((n) => {
-      const el = document.getElementById(n.toLowerCase());
-      if (el) io.observe(el);
-    });
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-    const rv = new IntersectionObserver(
-      (es) =>
-        es.forEach(
-          (e) => e.isIntersecting && (e.target.classList.add("v"), rv.unobserve(e.target))
-        ),
-      { threshold: 0.15 }
-    );
-    document.querySelectorAll(".rv").forEach((el) => rv.observe(el));
-
-    const onScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >=
-        document.documentElement.scrollHeight - 80
-      ) {
-        setOn("contact");
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const id = sectionIds[i];
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          if (scrollPosition >= top) {
+            setActiveSection(id);
+            break;
+          }
+        }
       }
     };
-    window.addEventListener("scroll", onScroll, { passive: true });
 
-    const onAnchorClick = (e: MouseEvent) => {
-      const a = (e.target as HTMLElement).closest('a[href="#contact"]');
-      if (a) {
-        e.preventDefault();
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "smooth",
-        });
-        window.history.pushState(null, "", "#contact");
-        setOn("contact");
-      }
-    };
-    document.addEventListener("click", onAnchorClick);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
-    if (window.location.hash === "#contact") {
-      setTimeout(() => {
-        window.scrollTo({
-          top: document.documentElement.scrollHeight,
-          behavior: "smooth",
-        });
-        setOn("contact");
-      }, 150);
-    }
-
-    return () => {
-      io.disconnect();
-      rv.disconnect();
-      window.removeEventListener("scroll", onScroll);
-      document.removeEventListener("click", onAnchorClick);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <>
-      <Scene />
-      <Navbar activeSection={on} />
-      <main id="top">
-        <HeroSection />
-        <WorriesSection />
-        <AboutSection />
-        <ServicesSection />
-        <SkillsSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+    <div className="min-h-screen font-sans relative text-zinc-100 selection:bg-purple-500/30 selection:text-white">
+      {/* Dual atmospheric ambient lighting */}
+      <AmbientBackground />
+
+      {/* Top Header Navigation with Direct CV Download and Section Links */}
+      <Navbar activeSection={activeSection} />
+
+      {/* Right Vertical Page Section Indicator */}
+      <PageSectionsNav activeSection={activeSection} />
+
+      {/* Main Content Sections */}
+      <main className="relative z-10">
+        <div className="pt-14 md:pt-20">
+          <HeroSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ContactSection />
+        </div>
       </main>
+
+      {/* Bottom Footer */}
       <Footer />
-      <WhatsAppButton />
-    </>
+
+      {/* Floating WhatsApp Action Button */}
+      <WhatsAppFloatingButton />
+    </div>
   );
 }

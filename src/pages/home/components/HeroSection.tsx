@@ -1,85 +1,100 @@
 "use client";
-import React, { useRef } from "react";
-import Typer from "./Typer";
+import React from "react";
+import StarBorder from "@/components/StarBorder";
+import { SectionPolygons } from "@/components/AmbientBackground";
+import TechVisual3D from "@/components/TechVisual3D";
 import { me } from "@/config/profile";
-import { proofStats } from "../data/home.data";
 
 export default function HeroSection() {
-  const hv = useRef<HTMLDivElement>(null);
-
-  const move = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!hv.current) return;
-    const r = hv.current.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width;
-    const y = (e.clientY - r.top) / r.height;
-    hv.current.style.transform = `rotateX(${(0.5 - y) * 8}deg) rotateY(${(x - 0.5) * 8}deg)`;
-  };
-
   return (
-    <section className="hero">
-      <div className="wrap hg">
-        <div>
-          <div className="pill">
-            <i></i>Available for new projects
+    <section
+      id="home"
+      className="min-h-0 md:min-h-screen py-12 px-4 sm:px-6 md:px-0 max-w-6xl mx-auto w-full pt-28 md:pt-24 pb-12 relative overflow-hidden flex items-center"
+    >
+      <SectionPolygons />
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full min-h-[auto] md:min-h-[80vh]">
+        {/* Left Column: Heading, Bio, CTAs, Proof badges (7 cols) */}
+        <div className="lg:col-span-7 flex flex-col justify-center text-left w-full z-10">
+          {/* Degree & Professional Credential Badge */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-xs text-zinc-300 font-mono mb-6 w-fit shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+            <span className="text-purple-300 font-semibold">BS Software Engineering (BSSE)</span>
+            <span className="text-zinc-600">•</span>
+            <span className="text-zinc-400">Abasyn University</span>
           </div>
-          <h1>
-            I build websites and apps
-            <br />
-            <span className="grad">that win customers.</span>
+
+          {/* High-contrast distinctive typography */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+            Building scalable MERN apps that{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400">
+              scale businesses.
+            </span>
           </h1>
-          <p className="s">
-            Hi, I’m Ahmad Iqbal — a Full Stack MERN Developer & Next.js Specialist. I turn business requirements into production-ready web apps, custom dashboards, and high-converting websites — delivered on time with direct 1-on-1 communication.
+
+          <p className="mt-5 md:mt-6 text-zinc-300 text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl">
+            Hi, I&apos;m <span className="text-white font-bold">Ahmad Iqbal</span> — BS Software Engineering (BSSE) graduate &amp; Full Stack MERN Developer with 2+ years of professional experience. I engineer scalable CRM platforms, admin dashboards, e-commerce stores, and client portals with TypeScript and AI-assisted workflows.
           </p>
-          <Typer />
-          <div className="cta">
-            <a className="btn c" href="#contact">
-              Get a free quote
-            </a>
-            <a
-              className="btn w"
-              href={me.whatsapp + "?text=Hi%20Ahmad%2C%20I%20have%20a%20project%20idea."}
-              target="_blank"
-              rel="noopener"
+
+          {/* Action CTAs */}
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mt-8">
+            <StarBorder
+              as="a"
+              href="#projects"
+              color="magenta"
+              className="[&_.inner-content]:!bg-white [&_.inner-content]:!text-black [&_.inner-content]:!font-semibold [&_.inner-content]:hover:!bg-zinc-200 [&_.inner-content]:!text-sm [&_.inner-content]:!py-2.5 [&_.inner-content]:!px-6 shadow-[0_0_25px_rgba(255,255,255,0.25)]"
             >
-              Chat on WhatsApp
+              <span>Explore Projects</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </StarBorder>
+
+            {/* Direct Instant Download CV Button */}
+            <a
+              href="/Ahmad_Iqbal_CV.pdf"
+              download="Ahmad_Iqbal_CV.pdf"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-2xl bg-white/[0.08] hover:bg-white/[0.16] border border-white/20 hover:border-purple-400/50 text-white transition-all shadow-sm"
+            >
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>Download CV (PDF)</span>
+            </a>
+
+            <a
+              href={`${me.whatsapp}?text=${encodeURIComponent("Hi Ahmad, I came across your portfolio and would like to discuss a project!")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-2xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-emerald-300 transition-all shadow-sm"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+              <span>WhatsApp Chat</span>
             </a>
           </div>
-          <div className="proof">
-            {proofStats.map((p) => (
-              <div key={p[1]}>
-                <b className="grad">{p[0]}</b>
-                <span>{p[1]}</span>
-              </div>
-            ))}
+
+          {/* Social proof counters from CV */}
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-10 pt-8 border-t border-white/10 max-w-lg">
+            <div>
+              <p className="text-2xl sm:text-3xl font-extrabold text-white">25+</p>
+              <p className="text-xs text-zinc-400 mt-0.5 font-medium">Delivered Apps</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-extrabold text-emerald-400">~30%</p>
+              <p className="text-xs text-zinc-400 mt-0.5 font-medium">Time Saved with CRM</p>
+            </div>
+            <div>
+              <p className="text-2xl sm:text-3xl font-extrabold text-purple-400">~40%</p>
+              <p className="text-xs text-zinc-400 mt-0.5 font-medium">Faster Component Build</p>
+            </div>
           </div>
         </div>
-        <div
-          className="hv"
-          ref={hv}
-          onMouseMove={move}
-          onMouseLeave={() => {
-            if (hv.current) hv.current.style.transform = "";
-          }}
-        >
-          <div className="disc"></div>
-          <img className="cut" src="/ahmad-cutout.webp" alt="Ahmad Iqbal, Full Stack MERN Developer" />
-          <div className="gc" style={{ left: "-4%", top: "20%" }}>
-            <b className="grad">Full-Stack</b>Frontend + Backend
-            <br />
-            in one engineer
-          </div>
-          <div className="gc" style={{ right: "-5%", top: "42%", animationDelay: "-2s" }}>
-            <b className="grad">8+</b>Production Apps
-            <br />
-            shipped on schedule
-          </div>
-          <div className="plate">
-            <b>Ahmad Iqbal</b>
-            <span>Full Stack MERN Developer · Available Worldwide</span>
-            <em>
-              <i></i>Replies within a few hours
-            </em>
-          </div>
+
+        {/* Right Column: 3D Interactive WebGL Visual (NO photo) (5 cols) */}
+        <div className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0">
+          <TechVisual3D />
         </div>
       </div>
     </section>
