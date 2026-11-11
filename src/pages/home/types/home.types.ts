@@ -25,6 +25,7 @@ export interface ProjectItem {
   image: string;
   tags: string[];
   liveUrl?: string;
+  githubUrl?: string;
   category: string;
 }
 
