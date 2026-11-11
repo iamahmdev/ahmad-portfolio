@@ -81,8 +81,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right Column: 3D Interactive WebGL Visual (NO photo) (5 cols) */}
-        <div className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0">
+        {/* Right Column: Modern Developer Terminal Console (5 cols) */}
+        <div className="lg:col-span-5 flex items-center justify-center relative mt-8 lg:mt-0 w-full px-2 sm:px-0 xl:pr-6">
           <TechVisual3D />
         </div>
       </div>

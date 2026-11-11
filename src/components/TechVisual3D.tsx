@@ -10,8 +10,8 @@ export default function TechVisual3D() {
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 16;
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -16;
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 12;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -12;
       setMousePos({ x, y });
     };
 
@@ -28,13 +28,13 @@ export default function TechVisual3D() {
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[500px] select-none transition-transform duration-200 ease-out"
+      className="relative w-full max-w-[460px] mx-auto select-none transition-transform duration-200 ease-out"
       style={{
         transform: `perspective(1000px) rotateY(${mousePos.x}deg) rotateX(${mousePos.y}deg)`,
       }}
     >
       {/* Background ambient radial glow */}
-      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-600/20 via-indigo-600/15 to-emerald-500/15 blur-2xl -z-10" />
+      <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-purple-600/20 via-indigo-600/15 to-emerald-500/15 blur-2xl -z-10" />
 
       {/* Modern Developer Terminal Window */}
       <div className="rounded-2xl border border-white/15 bg-zinc-950/90 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden font-mono">
@@ -64,7 +64,7 @@ export default function TechVisual3D() {
         </div>
 
         {/* Terminal Content Body */}
-        <div className="p-5 text-xs sm:text-[13px] leading-relaxed space-y-3">
+        <div className="p-4 sm:p-5 text-xs sm:text-[13px] leading-relaxed space-y-3">
           {/* Prompt 1 */}
           <div className="flex items-center gap-2 text-zinc-400">
             <span className="text-purple-400 font-bold">➜</span>
@@ -73,7 +73,7 @@ export default function TechVisual3D() {
           </div>
 
           {/* Profile Card Output */}
-          <div className="pl-4 border-l-2 border-purple-500/40 space-y-1 text-zinc-300">
+          <div className="pl-3.5 border-l-2 border-purple-500/40 space-y-1 text-zinc-300">
             <div className="text-white font-bold text-sm">
               Ahmad Iqbal <span className="text-purple-400 font-normal text-xs">(Full Stack MERN)</span>
             </div>
@@ -93,7 +93,7 @@ export default function TechVisual3D() {
           </div>
 
           {/* Core Stack Badges */}
-          <div className="pl-4 border-l-2 border-indigo-500/40 flex flex-wrap gap-1.5 pt-0.5">
+          <div className="pl-3.5 border-l-2 border-indigo-500/40 flex flex-wrap gap-1.5 pt-0.5">
             {[
               "React.js",
               "Next.js",
@@ -122,7 +122,7 @@ export default function TechVisual3D() {
           </div>
 
           {/* Metrics Output */}
-          <div className="pl-4 border-l-2 border-emerald-500/40 text-[11px] space-y-1 text-zinc-400">
+          <div className="pl-3.5 border-l-2 border-emerald-500/40 text-[11px] space-y-1 text-zinc-400">
             <div>
               <span className="text-emerald-400 font-semibold">✔ 25+ Production Apps</span> delivered on-time
             </div>
