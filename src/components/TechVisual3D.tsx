@@ -1,18 +1,17 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import dynamic from "next/dynamic";
 
-// Interactive 3D Sphere & Floating Holograms Canvas
-function Interactive3DScene() {
+export default function TechVisual3D() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 30;
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -30;
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 16;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * -16;
       setMousePos({ x, y });
     };
 
@@ -20,87 +19,129 @@ function Interactive3DScene() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const techBadges = [
-    { label: "React & Next.js", color: "from-sky-500/20 to-blue-600/30", border: "border-sky-400/40", pos: "top-4 left-0" },
-    { label: "Node & Express", color: "from-emerald-500/20 to-teal-600/30", border: "border-emerald-400/40", pos: "top-12 -right-4" },
-    { label: "TypeScript", color: "from-blue-500/20 to-indigo-600/30", border: "border-blue-400/40", pos: "bottom-16 -left-6" },
-    { label: "MongoDB & APIs", color: "from-green-500/20 to-emerald-600/30", border: "border-green-400/40", pos: "bottom-8 right-2" },
-    { label: "AI Vibe Coding", color: "from-purple-500/25 to-pink-600/30", border: "border-purple-400/50", pos: "-top-3 right-1/4" },
-  ];
+  const copyCommand = () => {
+    navigator.clipboard.writeText("npx ahmad-iqbal");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[480px] aspect-square flex items-center justify-center select-none"
+      className="relative w-full max-w-[500px] select-none transition-transform duration-200 ease-out"
+      style={{
+        transform: `perspective(1000px) rotateY(${mousePos.x}deg) rotateX(${mousePos.y}deg)`,
+      }}
     >
-      {/* Background radial glow */}
-      <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-purple-600/30 via-pink-600/20 to-indigo-600/30 blur-3xl" />
+      {/* Background ambient radial glow */}
+      <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-600/20 via-indigo-600/15 to-emerald-500/15 blur-2xl -z-10" />
 
-      {/* Outer 3D Gyroscope Ring 1 */}
-      <div
-        className="absolute w-72 h-72 sm:w-88 sm:h-88 rounded-full border border-purple-500/30 border-dashed animate-spin"
-        style={{ animationDuration: "25s" }}
-      />
+      {/* Modern Developer Terminal Window */}
+      <div className="rounded-2xl border border-white/15 bg-zinc-950/90 backdrop-blur-2xl shadow-[0_25px_60px_rgba(0,0,0,0.6)] overflow-hidden font-mono">
+        {/* Window Title Bar */}
+        <div className="flex items-center justify-between px-4 py-3 bg-white/[0.04] border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 rounded-full bg-red-500/80 inline-block" />
+            <span className="w-3 h-3 rounded-full bg-yellow-500/80 inline-block" />
+            <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
+            <span className="text-xs text-zinc-400 ml-2 font-mono">ahmad@engineer: ~</span>
+          </div>
 
-      {/* Outer 3D Gyroscope Ring 2 */}
-      <div
-        className="absolute w-60 h-60 sm:w-76 sm:h-76 rounded-full border border-indigo-400/25 border-dotted animate-spin"
-        style={{ animationDuration: "18s", animationDirection: "reverse" }}
-      />
-
-      {/* Interactive 3D Holographic Core */}
-      <div
-        className="relative w-48 h-48 sm:w-60 sm:h-60 rounded-3xl bg-gradient-to-br from-zinc-900/90 via-purple-950/60 to-zinc-950/95 border border-white/20 backdrop-blur-2xl shadow-[0_0_50px_rgba(168,85,247,0.35)] flex flex-col items-center justify-center p-6 transition-transform duration-300 ease-out"
-        style={{
-          transform: `perspective(1000px) rotateY(${mousePos.x}deg) rotateX(${mousePos.y}deg)`,
-        }}
-      >
-        {/* Animated Inner Neon Core */}
-        <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-pink-500 p-0.5 shadow-[0_0_35px_rgba(168,85,247,0.5)] flex items-center justify-center group">
-          <div className="w-full h-full bg-zinc-950 rounded-[14px] flex flex-col items-center justify-center">
-            <span className="font-mono text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-300 via-white to-indigo-300">
-              &lt;AI /&gt;
-            </span>
-            <span className="text-[9px] font-mono text-purple-300 font-bold mt-1 tracking-wider uppercase">
-              Full Stack
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={copyCommand}
+              className="text-[11px] text-zinc-400 hover:text-white px-2 py-0.5 rounded bg-white/[0.05] border border-white/10 transition-colors"
+              title="Copy terminal command"
+            >
+              {copied ? "Copied! ✓" : "$ npx ahmad"}
+            </button>
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
           </div>
         </div>
 
-        {/* Live HUD telemetry */}
-        <div className="mt-4 flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-          <span className="text-[11px] font-mono font-semibold text-emerald-300 tracking-wider">
-            SOFTWARE ENGINEER CORE
-          </span>
-        </div>
+        {/* Terminal Content Body */}
+        <div className="p-5 text-xs sm:text-[13px] leading-relaxed space-y-3">
+          {/* Prompt 1 */}
+          <div className="flex items-center gap-2 text-zinc-400">
+            <span className="text-purple-400 font-bold">➜</span>
+            <span className="text-sky-300">~</span>
+            <span className="text-zinc-100 font-semibold">whoami</span>
+          </div>
 
-        <div className="mt-1 flex items-center gap-2 text-[10px] font-mono text-zinc-400">
-          <span className="text-purple-300">BSSE GRADUATE</span>
-          <span>•</span>
-          <span>PRODUCTION READY</span>
+          {/* Profile Card Output */}
+          <div className="pl-4 border-l-2 border-purple-500/40 space-y-1 text-zinc-300">
+            <div className="text-white font-bold text-sm">
+              Ahmad Iqbal <span className="text-purple-400 font-normal text-xs">(Full Stack MERN)</span>
+            </div>
+            <div className="text-zinc-400 text-[11px]">
+              🎓 BS Software Engineering (BSSE) · Abasyn University
+            </div>
+            <div className="text-zinc-400 text-[11px]">
+              📍 Lahore, Pakistan · Available Worldwide (Remote)
+            </div>
+          </div>
+
+          {/* Prompt 2 */}
+          <div className="flex items-center gap-2 text-zinc-400 pt-1">
+            <span className="text-purple-400 font-bold">➜</span>
+            <span className="text-sky-300">~</span>
+            <span className="text-zinc-100 font-semibold">cat skills.json</span>
+          </div>
+
+          {/* Core Stack Badges */}
+          <div className="pl-4 border-l-2 border-indigo-500/40 flex flex-wrap gap-1.5 pt-0.5">
+            {[
+              "React.js",
+              "Next.js",
+              "Node.js",
+              "TypeScript",
+              "Express.js",
+              "MongoDB",
+              "REST APIs",
+              "Tailwind CSS",
+              "AI Vibe Coding",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-2 py-0.5 rounded bg-white/[0.06] border border-white/10 text-[10px] sm:text-[11px] text-zinc-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+
+          {/* Prompt 3 */}
+          <div className="flex items-center gap-2 text-zinc-400 pt-1">
+            <span className="text-purple-400 font-bold">➜</span>
+            <span className="text-sky-300">~</span>
+            <span className="text-zinc-100 font-semibold">git log --stats -1</span>
+          </div>
+
+          {/* Metrics Output */}
+          <div className="pl-4 border-l-2 border-emerald-500/40 text-[11px] space-y-1 text-zinc-400">
+            <div>
+              <span className="text-emerald-400 font-semibold">✔ 25+ Production Apps</span> delivered on-time
+            </div>
+            <div>
+              <span className="text-purple-400 font-semibold">✔ ~30% Time Cut</span> with internal CRM platform
+            </div>
+            <div>
+              <span className="text-sky-400 font-semibold">✔ ~40% Faster Build</span> via modular component libraries
+            </div>
+          </div>
+
+          {/* Live Prompt Status */}
+          <div className="flex items-center gap-2 text-zinc-400 pt-2 border-t border-white/10 text-[11px]">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-zinc-300 font-medium">Status:</span>
+            <span className="text-emerald-400 font-semibold">Open for Full-Time &amp; Client Projects</span>
+          </div>
         </div>
       </div>
-
-      {/* Floating 3D Skill Badges */}
-      {techBadges.map((badge, idx) => (
-        <div
-          key={badge.label}
-          className={`absolute ${badge.pos} px-3 py-1.5 rounded-xl bg-zinc-950/90 border ${badge.border} bg-gradient-to-r ${badge.color} backdrop-blur-xl shadow-lg flex items-center gap-2 animate-float`}
-          style={{
-            animationDelay: `${idx * -1.2}s`,
-            transform: `translate3d(${mousePos.x * 0.3}px, ${mousePos.y * 0.3}px, 0)`,
-          }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-          <span className="text-xs font-semibold text-white tracking-wide">
-            {badge.label}
-          </span>
-        </div>
-      ))}
     </div>
   );
 }
-
-export default dynamic(() => Promise.resolve(Interactive3DScene), { ssr: false });
-

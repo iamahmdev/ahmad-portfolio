@@ -7,9 +7,10 @@ interface PageSectionsNavProps {
 
 const sections = [
   { id: "home", num: "00", label: "Home" },
-  { id: "skills", num: "01", label: "Skills" },
+  { id: "experience", num: "01", label: "Experience" },
   { id: "projects", num: "02", label: "Projects" },
-  { id: "contact", num: "03", label: "Contact" },
+  { id: "skills", num: "03", label: "Skills" },
+  { id: "contact", num: "04", label: "Contact" },
 ];
 
 export default function PageSectionsNav({ activeSection }: PageSectionsNavProps) {

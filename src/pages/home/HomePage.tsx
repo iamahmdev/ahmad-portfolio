@@ -6,11 +6,12 @@ import PageSectionsNav from "@/components/PageSectionsNav";
 import { AmbientBackground } from "@/components/AmbientBackground";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import HeroSection from "./components/HeroSection";
-import SkillsSection from "./components/SkillsSection";
+import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
+import SkillsSection from "./components/SkillsSection";
 import ContactSection from "./components/ContactSection";
 
-const sectionIds = ["home", "skills", "projects", "contact"];
+const sectionIds = ["home", "experience", "projects", "skills", "contact"];
 
 export default function HomePage() {
   const [activeSection, setActiveSection] = useState("home");
@@ -53,8 +54,9 @@ export default function HomePage() {
       <main className="relative z-10">
         <div className="pt-14 md:pt-20">
           <HeroSection />
-          <SkillsSection />
+          <ExperienceSection />
           <ProjectsSection />
+          <SkillsSection />
           <ContactSection />
         </div>
       </main>
