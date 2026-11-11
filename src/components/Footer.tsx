@@ -39,9 +39,22 @@ export default function Footer() {
           </a>
           <a
             href="#home"
-            className="hover:text-white dark:hover:text-white light:hover:text-black transition-colors"
+            aria-label="Scroll back to top"
+            className="flex items-center justify-center w-8 h-8 rounded-xl bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-purple-400/50 text-zinc-400 hover:text-white transition-all shadow-sm group"
           >
-            Back to top ↑
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="transition-transform group-hover:-translate-y-0.5"
+            >
+              <path d="M12 19V5M5 12l7-7 7 7" />
+            </svg>
           </a>
         </div>
       </div>
