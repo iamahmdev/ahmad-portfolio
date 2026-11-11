@@ -92,10 +92,12 @@ a {
 }
 
 @media (max-width: 767px) {
+
   .inner-content,
   .star-border-container {
     border-radius: 14px;
   }
+
   .inner-content {
     font-size: 13px;
     padding: 9px 18px;
@@ -107,6 +109,7 @@ a {
     transform: translate(0);
     opacity: 1;
   }
+
   100% {
     transform: translate(-100%);
     opacity: 0;
@@ -118,6 +121,7 @@ a {
     transform: translate(0);
     opacity: 1;
   }
+
   100% {
     transform: translate(100%);
     opacity: 0;
@@ -148,6 +152,7 @@ a {
     background: #ffffff !important;
     color: #000000 !important;
   }
+
   .no-print {
     display: none !important;
   }

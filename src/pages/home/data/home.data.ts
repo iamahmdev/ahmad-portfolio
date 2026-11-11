@@ -155,7 +155,6 @@ export const projectsList: ProjectItem[] = [
       "Full-featured e-commerce online store featuring 50+ handcrafted footwear products, shopping cart, real-time order tracking, Cash on Delivery checkout, and an interactive 3D product view allowing customers to inspect shoes before purchasing.",
     image: "/projects/hangubrandedshoes.png",
     liveUrl: "https://hangubrandedshoes.vercel.app/",
-    githubUrl: "https://github.com/iamahmdev/Hangu_Brand_Shoes",
     tags: ["MERN / Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     category: "E-Commerce",
   },
@@ -166,7 +165,6 @@ export const projectsList: ProjectItem[] = [
       "Responsive, modern academic platform for a medical and technical college with animated UI, program directories, and admissions inquiry workflows.",
     image: "/projects/canmedtech.png",
     liveUrl: "https://can-med-tech-college-ize4.vercel.app",
-    githubUrl: "https://github.com/iamahmdev/CanMedTechCollege",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Vercel"],
     category: "Education & Corporate",
   },
@@ -177,7 +175,6 @@ export const projectsList: ProjectItem[] = [
       "High-converting commercial cleaning services platform with instant online booking, interactive service tiers, custom quote calculation, and smooth responsive animations.",
     image: "/projects/camzcleaning.png",
     liveUrl: "https://camz-cleaning.vercel.app",
-    githubUrl: "https://github.com/iamahmdev/Camz_Cleaning",
     tags: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite", "Vercel"],
     category: "On-Demand Services",
   },
@@ -187,7 +184,6 @@ export const projectsList: ProjectItem[] = [
     description:
       "Collaborative enterprise CRM engineered to streamline daily business operations, client pipelines, and internal task tracking, delivered module-by-module and cutting daily manual tracking time by ~30%.",
     image: "/projects/corespace.jpg",
-    githubUrl: "https://github.com/iamahmdev/Khyber_Coded_CRM",
     tags: ["MERN Stack", "TypeScript", "REST APIs", "MongoDB", "Tailwind CSS"],
     category: "CRM & SaaS",
   },
@@ -197,7 +193,6 @@ export const projectsList: ProjectItem[] = [
     description:
       "Enterprise technology portal showcasing digital marketing, mobile app engineering, custom software solutions, and cloud infrastructure services.",
     image: "/projects/softcore.jpg",
-    githubUrl: "https://github.com/iamahmdev/Softcore_Technologies",
     tags: ["React", "TypeScript", "Tailwind CSS", "TanStack Query", "Vite"],
     category: "Enterprise Software",
   },
@@ -207,7 +202,6 @@ export const projectsList: ProjectItem[] = [
     description:
       "Comprehensive travel and hospitality reservation engine for booking flights, hotels, car rentals, and city transfers with intuitive filtering.",
     image: "/projects/thebooktoday.jpg",
-    githubUrl: "https://github.com/iamahmdev/TheBookToday",
     tags: ["React", "TypeScript", "Tailwind CSS", "Radix UI", "TanStack Query"],
     category: "Travel & Hospitality",
   },
