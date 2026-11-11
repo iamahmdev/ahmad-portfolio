@@ -16,21 +16,6 @@ export default function HeroSection() {
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full min-h-[auto] md:min-h-[80vh]">
         {/* Left Column: Heading, Bio, CTAs, Proof badges (7 cols) */}
         <div className="lg:col-span-7 flex flex-col justify-center text-left w-full z-10">
-          {/* Sleek status bar without bulky borders */}
-          <div className="flex items-center gap-2 mb-6">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span className="text-xs sm:text-sm font-mono text-zinc-400">
-              <span className="text-white font-medium">Ahmad Iqbal</span>
-              <span className="text-zinc-600 mx-2">·</span>
-              <span className="text-purple-300 font-medium">BS Software Engineering (BSSE)</span>
-              <span className="text-zinc-600 mx-2">·</span>
-              <span className="text-emerald-400 font-medium">Available</span>
-            </span>
-          </div>
-
           {/* High-contrast distinctive typography */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.06] tracking-tight">
             Building scalable MERN apps that{" "}
