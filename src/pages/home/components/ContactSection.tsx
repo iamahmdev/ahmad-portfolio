@@ -19,7 +19,7 @@ export default function ContactSection() {
       value: me.phone,
       action: "Send Message",
       href: `${me.whatsapp}?text=${encodeURIComponent(
-        "Hi Ahmad, I came across your portfolio and would like to discuss a project / contract!"
+        "Hi Ahmad, I'd like to discuss a project."
       )}`,
       badge: "Instant Reply",
       color: "text-emerald-400",

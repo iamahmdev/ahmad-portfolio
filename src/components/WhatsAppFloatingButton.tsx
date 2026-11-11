@@ -6,7 +6,7 @@ export default function WhatsAppFloatingButton() {
   const [tooltipVisible, setTooltipVisible] = useState(false);
 
   const prefilledUrl = `${me.whatsapp}?text=${encodeURIComponent(
-    "Hi Ahmad, I came across your portfolio and would like to discuss a project / engineering role!"
+    "Hi Ahmad, I'd like to discuss a project."
   )}`;
 
   return (
