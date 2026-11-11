@@ -17,38 +17,41 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="min-h-0 md:min-h-screen py-16 px-4 sm:px-6 md:px-0 max-w-6xl mx-auto w-full relative overflow-hidden"
+      className="min-h-0 md:min-h-screen py-16 px-4 sm:px-6 md:px-0 max-w-6xl mx-auto w-full relative"
     >
       <SectionPolygons />
 
       <div className="relative z-10">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8 md:mb-12">
-          <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-              Featured Case Studies
-            </h2>
-            <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl font-normal leading-relaxed">
-              Production web applications, client portals, and bespoke SaaS platforms engineered for real businesses.
-            </p>
-          </div>
-        </div>
+        {/* Sticky Section Header & Category Filters Bar */}
+        <div className="sticky top-16 md:top-20 z-20 -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0 py-4 mb-8 md:mb-10 bg-zinc-950/80 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+                Featured Case Studies
+              </h2>
+              <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-xl font-normal leading-relaxed">
+                Production web applications, client portals, and bespoke SaaS platforms engineered for real businesses.
+              </p>
+            </div>
 
-        {/* Category Filters Pill Bar */}
-        <div className="flex flex-wrap gap-2 mb-8 md:mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setSelectedCategory(cat)}
-              className={`text-xs sm:text-sm px-4 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${
-                selectedCategory === cat
-                  ? "bg-white dark:bg-white light:bg-zinc-950 text-black dark:text-black light:text-white border-white dark:border-white light:border-zinc-950 font-bold shadow-md"
-                  : "bg-white/[0.04] dark:bg-white/[0.04] light:bg-black/[0.04] text-zinc-400 dark:text-zinc-400 light:text-zinc-600 border-white/10 dark:border-white/10 light:border-black/10 hover:border-purple-400/50 hover:text-white dark:hover:text-white light:hover:text-black"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+            {/* Category Filters Pill Bar */}
+            <div className="flex flex-wrap gap-1.5 shrink-0">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`text-xs px-3.5 py-1.5 rounded-xl border transition-all duration-200 cursor-pointer ${
+                    selectedCategory === cat
+                      ? "bg-white text-black border-white font-bold shadow-md"
+                      : "bg-white/[0.04] text-zinc-400 border-white/10 hover:border-purple-400/50 hover:text-white"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Projects Grid */}
