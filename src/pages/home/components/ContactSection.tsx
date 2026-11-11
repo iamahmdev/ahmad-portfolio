@@ -109,19 +109,19 @@ export default function ContactSection() {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="max-w-2xl text-center lg:text-left">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3">
-                Download Curriculum Vitae (CV)
+                Download Official Resume
               </h3>
               <p className="text-zinc-300 text-sm sm:text-base leading-relaxed">
-                Complete technical profile highlighting 2+ years of production experience in MERN &amp; Next.js stacks, Khyber Coded CRM case study, 25+ delivered web applications, and proven business metrics.
+                Get a verified one-page summary of my full-stack engineering background, production case studies, tech stack, and measurable business impact.
               </p>
             </div>
 
-            {/* Direct Instant Download CV Button */}
+            {/* Direct Instant Download Resume Button */}
             <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
               <StarBorder
                 as="a"
                 href="/Ahmad_Iqbal_CV.pdf"
-                download="Ahmad_Iqbal_CV.pdf"
+                download="Ahmad_Iqbal_Resume.pdf"
                 color="magenta"
                 speed="4s"
                 className="[&_.inner-content]:!py-3.5 [&_.inner-content]:!px-8 [&_.inner-content]:!text-base [&_.inner-content]:!font-bold [&_.inner-content]:!bg-white [&_.inner-content]:!text-black [&_.inner-content]:hover:!bg-zinc-200 shadow-md cursor-pointer"
@@ -131,7 +131,7 @@ export default function ContactSection() {
                   <polyline points="7 10 12 15 17 10" />
                   <line x1="12" y1="15" x2="12" y2="3" />
                 </svg>
-                <span>Download CV (PDF)</span>
+                <span>Download Resume (PDF)</span>
               </StarBorder>
 
               <button
